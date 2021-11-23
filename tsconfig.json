@@ -1,0 +1,21 @@
+{
+    "exclude": [
+      "node_modules"
+    ],
+    "compilerOptions": {
+      "target": "es2017",
+      "lib": [ "es2017" ],
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "skipLibCheck": true,
+      "alwaysStrict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "noImplicitThis": true,
+      "resolveJsonModule": true,
+      "importHelpers": true,
+      "experimentalDecorators": true,
+      "sourceMap": true
+    }
+  }
+  

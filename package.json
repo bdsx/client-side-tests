@@ -1,0 +1,32 @@
+{
+  "name": "bdsxtester",
+  "version": "1.0.0",
+  "description": "Unit tests for BDSX- the client side",
+  "main": "index.js",
+  "dependencies": {
+    "bedrock-protocol": "^3.7.0",
+    "bedrock-provider": "^1.0.2",
+    "colors": "^1.4.0",
+    "leveldb-zlib": "^1.1.1",
+    "prismarine-nbt": "^2.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/uuid": "^8.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-github": "^4.3.5",
+    "eslint-plugin-import": "^2.25.3",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "lint": "eslint . --ext ts",
+    "lint-fix": "eslint . --ext ts --fix",
+    "main": "node index.js"
+  },
+  "author": "7dev7urandom",
+  "license": "ISC"
+}
