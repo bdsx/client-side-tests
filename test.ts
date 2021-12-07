@@ -64,7 +64,7 @@ export class Test {
         return this.assert(first === second, message + "; Expected: " + second + " but got: " + first);
     }
     assertDeepEqual(first: any, second: any, message: string): boolean {
-        return this.assert(deepEqual(first, second), message + "; Expected: " + second + " but got: " + first);
+        return this.assert(deepEqual(first, second), message + "; Expected: " + JSON.stringify(second) + " but got: " + JSON.stringify(first));
     }
 }
 
@@ -76,6 +76,7 @@ function deepEqual(x: any, y: any): boolean {
         if (Object.keys(x).length !== Object.keys(y).length) return false;
 
         for (const prop in x) {
+            if(y[prop] === "*") continue;
             if (y.hasOwnProperty(prop)) {
                 if (!deepEqual(x[prop], y[prop])) return false;
             } else return false;
