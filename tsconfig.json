@@ -9,7 +9,7 @@
       "moduleResolution": "Node",
       "skipLibCheck": true,
       "alwaysStrict": true,
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "strictNullChecks": true,
       "noImplicitThis": true,
       "resolveJsonModule": true,

@@ -1,5 +1,11 @@
-import './commondata';
+// Fix TS not finding EventEmitter
+import { EventEmitter } from 'events';
+declare module 'bedrock-protocol' {
+    interface Connection extends EventEmitter {
+    }
+}
 
+import './commondata';
 import { runTests } from './test';
 
 // Map<testName, runBeforeConnection>

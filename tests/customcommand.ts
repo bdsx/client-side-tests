@@ -14,7 +14,7 @@ let fff = false;
 let ggg = false;
 let hhh = false;
 type Overload = {
-    paramater_name: string;
+    parameter_name: string;
     value_type: keyof Enums;
     enum_type: string;
     optional: boolean;
@@ -53,7 +53,7 @@ function handler(pkt: {
             test.assertEqual(command.flags, 192, 'Wrong command flags for command aaa');
             test.assertEqual(command.permission_level, 0, 'Wrong command permission level for command aaa');
             test.assertDeepEqual(command.overloads, [[{
-                paramater_name: 'rawtext',
+                parameter_name: 'rawtext',
                 value_type: 'raw_text',
                 enum_type: 'valid',
                 optional: false,
@@ -111,7 +111,7 @@ function handler(pkt: {
             test.assertEqual(command.permission_level, 0, 'Wrong command permission level for command ggg');
             test.assert(command.overloads.length === 1, 'Wrong command overloads length for command ggg');
             test.assert(command.overloads[0].length === 2, 'Incorrect overload arguments for command ggg');
-            test.assertEqual(command.overloads[0][1].paramater_name, 'enum2', 'Wrong enum name for command ggg');
+            test.assertEqual(command.overloads[0][1].parameter_name, 'enum2', 'Wrong enum name for command ggg');
             test.assertDeepEqual(pkt.enums[command.overloads[0][0].value_type].values.map(x => pkt.enum_values[x]), ['enum1', 'enum2', 'enum3'], 'Wrong enum values for command ggg (Enum: ' + pkt.enums[command.overloads[0][1].enum_type].name + ')');
             test.assertDeepEqual(pkt.enums[command.overloads[0][1].value_type].values.map(x => pkt.enum_values[x]), ['overworld', 'nether', 'theend', 'undefined'], 'Wrong enum values for command ggg (Enum: ' + pkt.enums[command.overloads[0][1].enum_type].name + ')');
             ggg = true;
