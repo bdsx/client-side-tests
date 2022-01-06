@@ -25,7 +25,8 @@ runTests(new Map([
     ['net-scorepacket', false],
     ['net-transferserver', false],
     ['setblock', false],
-    ['net-rawpacket', false]
+    ['net-rawpacket', false],
+    ['lowlevel-checkclientcacheblobstatus', false]
 ]));
 
 import { client } from './client';
